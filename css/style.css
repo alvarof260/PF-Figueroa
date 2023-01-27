@@ -71,6 +71,11 @@ body{
     text-decoration: none;
     font-weight: 500;
     font-size: 1.125rem;
+    transition: all .5s 0s ease;
+}
+
+.nav__list a:hover, .nav__list a:focus{
+    color: #3084F2;
 }
 
 /* navbar */
@@ -397,7 +402,14 @@ body{
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
-    
+    transition: all .5s 0s ease;
+}
+
+#submit:focus,#submit:hover{
+    color: #fffffe;
+    background-color: #06d6a0;
+    transform: scale(1.1,1.1);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 
@@ -440,6 +452,12 @@ body{
     margin-right: 1.563rem;
     cursor: pointer;
     text-decoration: none;
+    transition: all .5s 0s ease;
+}
+
+.fa-brands:hover, .fa-brands:focus{
+    color: #3084F2;
+    transform: scale(1.4,1.4);
 }
 
 .copy{
