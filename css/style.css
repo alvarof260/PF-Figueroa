@@ -455,7 +455,7 @@ body{
     transition: all .5s 0s ease;
 }
 
-.fa-brands:hover, .fa-brands:focus{
+.container__social-icons .fa-brands:hover,.container__social-icons .fa-brands:focus{
     color: #3084F2;
     transform: scale(1.4,1.4);
 }
