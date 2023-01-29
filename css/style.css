@@ -7,24 +7,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+.background{
     background-color: #1A1826;
 }
 
 
 /* navbar */
 
-.navbar{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+.navbar{    
     background-image: linear-gradient(to bottom right, #13121b, #1A1826 );
     width: 80vw;
-    margin: .625rem auto;
-    border-radius: 10rem;
+    margin: 0 auto;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     position: sticky;
-    top: .625rem;
+    top: 0;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -63,18 +60,20 @@ body{
 .nav__list li{
     display: inline;
     list-style-type: none;
-    padding: 0 .625rem;
+    
 }
 
-.nav__list a{
+.nav-item a{
     color: #fffffe;
+    display: inline-block;
     text-decoration: none;
     font-weight: 500;
+    padding: .3rem;
     font-size: 1.125rem;
     transition: all .5s 0s ease;
 }
 
-.nav__list a:hover, .nav__list a:focus{
+.nav-item a:hover, .nav-item a:focus{
     color: #3084F2;
 }
 
@@ -183,16 +182,22 @@ body{
 
 }
 
-.card{
+.card-{
     background-color: #323859;
     width: 10.625rem;
     height: 12.5rem;
     text-align: center;
     border-radius: .313rem;
     margin: .625rem;
+    transition: all .4s 0s ease;
 }
 
-.card .fa-brands{
+.card-:hover, .card-:focus{
+    transform: scale(1.1,1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(18, 18, 19, 0.40) 0px -2px 6px 0px inset;
+}
+
+.card- .fa-brands{
     color: #0161F2;
     font-size: 4.5rem;
     margin: 3.125rem 0;
@@ -232,11 +237,18 @@ body{
 .card--services{
     background-color: #323859;
     width: 15.625rem;
-    height: 18.75rem;
+    height: 25rem;
     border-radius: 0.938rem;
     margin: 0.938rem;
     text-align: left;
     padding: 3.125rem 0.938rem;
+    transition: all .4s 0s ease;
+}
+
+.card--services:hover, .card--services:focus{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(18, 18, 19, 0.40) 0px -2px 6px 0px inset;
 }
 
 .card--services .fa-solid{
@@ -468,3 +480,94 @@ body{
 }
 
 /* footer*/
+
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    /*home*/
+
+    #content-home{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .box-image{
+        width: 80vw;
+    }
+
+    .box-text{
+        width: 70vw;
+        text-align: center;
+    }
+
+    .box-text__title--BigTitle{
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    /*home*/
+
+    /*about*/
+
+    #content-about{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+    }
+
+    #content-about .box-text{
+        text-align: center;
+        margin-bottom: 2.5rem;
+        margin-right: 0;
+    }
+
+    #content-skills{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100vh;
+    }
+
+    .box-skill{
+        display: flex;
+        flex-flow: column wrap;
+        width: 80vw;
+    }
+
+    .box-skill__box-cards{
+        width: 80vw;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .card-{
+        width:6.5rem;
+        height: 7.5rem;
+    }
+
+    .card- .fa-brands{
+        font-size: 3rem;
+        margin: 1.125rem 0;
+
+    }
+
+    /*about*/
+
+    /*footer*/
+
+    .footer__container{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .container__social-icons{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: .75rem;
+    }
+
+    .container__social-icons .fa-brands{
+        margin:0 .5rem;
+    }
+
+    /*footer*/
+}
