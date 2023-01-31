@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
+@import "variables";
 *{
     border: 0%;
     padding: 0%;
@@ -8,14 +8,14 @@
 }
 
 .background{
-    background-color: #1A1826;
+    background-color: $main-color;
 }
 
 
 /* navbar */
 
 .navbar{    
-    background-image: linear-gradient(to bottom right, #13121b, #1A1826 );
+    background-image: linear-gradient(to bottom right, $secundary-color, $main-color );
     width: 80vw;
     margin: 0 auto;
     border-bottom-left-radius: 1rem;
@@ -29,22 +29,22 @@
 .box-btn__btn{
     width: 7.5rem;
     height: 3.125rem;
-    color: #fffffe;
+    color: $white;
     font-weight: bold;
     font-size: 1.125rem;
-    background-color: #3084F2;
+    background-color: $tertiary;
     border: none;
     border-radius: .25rem;
     cursor: pointer;
     transition: all .5s 0s ease;
+    &:hover, &:focus{
+        transform: scale(1.1,1.1);
+        color: $tertiary;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
 }
 
-.box-btn__btn:hover, .box-btn__btn:focus{
-    transform: scale(1.1,1.1);
-    color: #3084F2;
-    background-color: #fffffe;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
 
 .navbar__box-logo{
     width: 4rem;
@@ -57,24 +57,26 @@
     width: 100%;
 }
 
-.nav__list li{
-    display: inline;
-    list-style-type: none;
-    
+.nav__list{
+    li{
+        display: inline;
+        list-style-type: none;
+    }
 }
 
-.nav-item a{
-    color: #fffffe;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    padding: .3rem;
-    font-size: 1.125rem;
-    transition: all .5s 0s ease;
-}
-
-.nav-item a:hover, .nav-item a:focus{
-    color: #3084F2;
+.nav-item{
+    a{
+        color: $white;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 500;
+        padding: .3rem;
+        font-size: 1.125rem;
+        transition: all .5s 0s ease;
+        &:hover,&:focus{
+            color: $tertiary;
+        }
+    }
 }
 
 /* navbar */
@@ -107,14 +109,14 @@
     font-size: 4.5rem;
     font-weight: bold;
     line-height: 1;
-    color: #0554F2;
+    color: $blue;
 }
 
 .box-text__subtitle{
     font-size: 1.5;
     font-weight: 400;
     margin-top: 0.938rem;
-    color: #323859;
+    color: $blue-light;
 }
 
 /** home * content **/
@@ -130,20 +132,22 @@
     align-items: center;
 }
 
-#content-about .box-text{
-    text-align: left;
-    margin-right: 2.5rem;
+#content-about{
+    .box-text{
+        text-align: left;
+        margin-right: 2.5rem;
+    }
 }
 
 .box-text__title{
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.5;
-    color: #0554F2;
+    color: $blue;
 }
 
 .box-text__paragraph{
-    color: #94a1b2;
+    color: $gray;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
@@ -171,7 +175,7 @@
     font-size: 2rem;
     font-weight: bold;
     line-height: 2;
-    color: #0554F2;
+    color: $blue;
     text-align: center;
 }
 
@@ -183,28 +187,29 @@
 }
 
 .card-{
-    background-color: #323859;
+    background-color: $blue-light;
     width: 10.625rem;
     height: 12.5rem;
     text-align: center;
     border-radius: .313rem;
     margin: .625rem;
     transition: all .4s 0s ease;
+    &:hover,&:focus{
+        transform: scale(1.1,1.1);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(18, 18, 19, 0.40) 0px -2px 6px 0px inset;
+    }
 }
 
-.card-:hover, .card-:focus{
-    transform: scale(1.1,1.1);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(18, 18, 19, 0.40) 0px -2px 6px 0px inset;
-}
-
-.card- .fa-brands{
-    color: #0161F2;
-    font-size: 4.5rem;
-    margin: 3.125rem 0;
+.card-{
+    .fa-brands{
+        color: $blue;
+        font-size: 4.5rem;
+        margin: 3.125rem 0;
+    } 
 }
 
 .card__subtitle{
-    color: #fffffe;
+    color: $white;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -225,7 +230,7 @@
     font-weight: bold;
     line-height: 1.5;
     margin: 5.313rem 0;
-    color: #0554F2;
+    color: $blue;
 }
 
 #card-services{
@@ -235,7 +240,7 @@
 }
 
 .card--services{
-    background-color: #323859;
+    background-color: $blue-light;
     width: 15.625rem;
     height: 25rem;
     border-radius: 0.938rem;
@@ -243,29 +248,30 @@
     text-align: left;
     padding: 3.125rem 0.938rem;
     transition: all .4s 0s ease;
+    &:hover,&:focus{
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(18, 18, 19, 0.40) 0px -2px 6px 0px inset;
+    }
 }
 
-.card--services:hover, .card--services:focus{
-    cursor: pointer;
-    transform: scale(1.1,1.1);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(18, 18, 19, 0.40) 0px -2px 6px 0px inset;
-}
-
-.card--services .fa-solid{
-    color: #fffffe;
-    font-size: 2rem;
-    line-height: 2;
+.card--services{
+    .fa-solid{
+        color: $white;
+        font-size: 2rem;
+        line-height: 2;
+    }
 }
 
 .card__title{
-    color: #0554F2;
+    color: $blue;
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.5;
 }
 
 .card__paragraph{
-    color: #94a1b2;
+    color: $gray;
     font-size: 1rem;
     font-weight: 400;
 
@@ -317,9 +323,12 @@
 }
 
 #content-proyect .box-text__btn{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
+    .box-text__btn{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }
+    
 }
 
 /** proyect * content **/
@@ -349,11 +358,11 @@
 
 #nom{
     grid-area: name;
-    background-color: #323859;
+    background-color: $blue-light;
     border: none;
     border-radius: .3rem;
     padding-left: 1rem;
-    color: #94a1b2;
+    color: $gray;
     outline: none;
 }
 
@@ -363,69 +372,65 @@
 
 #ema{
     grid-area: email;
-    background-color: #323859;
+    background-color: $blue-light;
     border: none;
     border-radius: .3rem;
     padding-left: 1rem;
-    color: #94a1b2;
+    color: $gray;
     outline: none;
 }
 
 #ema::placeholder{
-    color: #0554F2;
+    color: $blue;
 }
 
 #pro{
     grid-area: proyect;
-    background-color: #323859;
+    background-color: $blue-light;
     border: none;
     border-radius: .3rem;
     padding-left: 1rem;
-    color: #94a1b2;
+    color: $gray;
     outline: none;
 }
 
 #pro::placeholder{
-    color: #0554F2;
+    color: $blue;
 }
 
 #msj{
     grid-area: message;
-    background-color: #323859;
+    background-color: $blue-light;
     border: none;
     border-radius: .3rem;
     padding: 1rem;
-    color: #94a1b2;
+    color: $gray;
     outline: none;
+    &::placeholder{
+        color: $blue;
+    }
 }
 
-#msj::placeholder{
-    color: #0554F2;
-}
 
 #submit{
     grid-area: send;
     width: 7.5rem;
     height: 3rem;
-    color: #fffffe;
+    color: $white;
     font-weight: bold;
     font-size: 1rem;
-    background-color: #3084F2;
+    background-color: $blue;
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
     transition: all .5s 0s ease;
+    &:focus,&:hover{
+        color: $white;
+        background-color: $green;
+        transform: scale(1.1,1.1);
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
 }
-
-#submit:focus,#submit:hover{
-    color: #fffffe;
-    background-color: #06d6a0;
-    transform: scale(1.1,1.1);
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
-
-
 
 /*TODO contact * content TODO*/
 
@@ -446,35 +451,37 @@
 }
 
 .box-description__title{
-    color: #3084F2;
+    color: $blue;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.5;
 }
 
 .box-description__subtitle{
-    color: #fffffe;
+    color: $white;
     font-size: 1rem;
     font-weight: 400;
 }
 
-.container__social-icons .fa-brands{
-    color: #fffffe;
-    font-size: 2rem;
-    margin-right: 1.563rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all .5s 0s ease;
-}
-
-.container__social-icons .fa-brands:hover,.container__social-icons .fa-brands:focus{
-    color: #3084F2;
-    transform: scale(1.4,1.4);
+.container__social-icons{
+    .fa-brands{
+        color: $white;
+        font-size: 2rem;
+        margin-right: 1.563rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .5s 0s ease;
+        &:hover,&:focus{
+            color: $blue;
+            transform: scale(1.4,1.4);
+        }
+    }
+    
 }
 
 .copy{
     text-align: center;
-    color: #fffffe;
+    color: $white;
     font-size: .813rem;
     font-style: italic;
 }
@@ -513,10 +520,12 @@
         height: 100vh;
     }
 
-    #content-about .box-text{
-        text-align: center;
-        margin-bottom: 2.5rem;
-        margin-right: 0;
+    #content-about{
+        .box-text{
+            text-align: center;
+            margin-bottom: 2.5rem;
+            margin-right: 0;
+        }   
     }
 
     #content-skills{
@@ -565,8 +574,10 @@
         margin-top: .75rem;
     }
 
-    .container__social-icons .fa-brands{
-        margin:0 .5rem;
+    .container__social-icons{
+        .fa-brands{
+            margin:0 .5rem;
+        }
     }
 
     /*footer*/
