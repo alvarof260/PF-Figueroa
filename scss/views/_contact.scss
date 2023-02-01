@@ -1,0 +1,100 @@
+/*TODO contact * content TODO*/
+
+#content-contact{
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#form{
+    display: grid;
+    grid-template-areas: 
+    "name email"
+    "proyect proyect"
+    "message message"
+    ".  send"
+    ;
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: 3rem 3rem auto;
+    grid-column-gap: .5rem;
+    grid-row-gap: 1rem;
+}
+
+#nom{
+    grid-area: name;
+    background-color: $blue-light;
+    border: none;
+    border-radius: .3rem;
+    padding-left: 1rem;
+    color: $gray;
+    outline: none;
+}
+
+#nom::placeholder{
+    color: #0554F2;
+}
+
+#ema{
+    grid-area: email;
+    background-color: $blue-light;
+    border: none;
+    border-radius: .3rem;
+    padding-left: 1rem;
+    color: $gray;
+    outline: none;
+}
+
+#ema::placeholder{
+    color: $blue;
+}
+
+#pro{
+    grid-area: proyect;
+    background-color: $blue-light;
+    border: none;
+    border-radius: .3rem;
+    padding-left: 1rem;
+    color: $gray;
+    outline: none;
+}
+
+#pro::placeholder{
+    color: $blue;
+}
+
+#msj{
+    grid-area: message;
+    background-color: $blue-light;
+    border: none;
+    border-radius: .3rem;
+    padding: 1rem;
+    color: $gray;
+    outline: none;
+    &::placeholder{
+        color: $blue;
+    }
+}
+
+
+#submit{
+    grid-area: send;
+    width: 7.5rem;
+    height: 3rem;
+    color: $white;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: $blue;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all .5s 0s ease;
+    &:focus,&:hover{
+        color: $white;
+        background-color: $green;
+        transform: scale(1.1,1.1);
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+}
+
+/*TODO contact * content TODO*/

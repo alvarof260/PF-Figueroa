@@ -1,0 +1,65 @@
+/** home * content **/
+
+#content-home{
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-image{
+    width: 25vw;
+}
+
+.box-image__image{
+    width: 100%;
+}
+
+.box-text{
+    width: 25vw;
+    text-align: right;
+}
+
+.box-text__title--BigTitle{
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: $blue;
+}
+
+.box-text__subtitle{
+    font-size: 1.5;
+    font-weight: 400;
+    margin-top: 0.938rem;
+    color: $blue-light;
+}
+
+/** home * content **/
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    
+    /*home*/
+
+    #content-home{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .box-image{
+        width: 80vw;
+    }
+
+    .box-text{
+        width: 70vw;
+        text-align: center;
+    }
+
+    .box-text__title--BigTitle{
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    
+    /*home*/
+}
+    

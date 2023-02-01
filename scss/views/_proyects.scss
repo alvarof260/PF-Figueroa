@@ -1,0 +1,53 @@
+/** proyect * content **/
+
+
+#content-proyect{
+    height: 100vh;
+}
+
+.proyects{
+    width: 80vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.proyects__box{
+    width: 35vw;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 3rem;
+    margin-right: 3.5rem;
+}
+
+.box{
+    width: 50rem;
+}
+
+.box__image{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.box-text--proyect{
+    text-align: left;
+    margin-left: .8rem;
+}
+
+.box-btn__btn--small{
+    width: 5rem;
+    height: 2rem;
+    margin-right: .5rem;
+}
+
+#content-proyect .box-text__btn{
+    .box-text__btn{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+    }
+    
+}
+
+/** proyect * content **/

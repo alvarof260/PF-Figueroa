@@ -1,0 +1,76 @@
+/* navbar */
+
+.navbar{    
+    background-image: linear-gradient(to bottom right, $secundary-color, $main-color );
+    width: 80vw;
+    margin: 0 auto;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+.box-btn__btn{
+    width: 7.5rem;
+    height: 3.125rem;
+    color: $white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    background-color: $tertiary;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all .5s 0s ease;
+    &:hover, &:focus{
+        transform: scale(1.1,1.1);
+        color: $tertiary;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+}
+
+
+.navbar__box-logo{
+    width: 4rem;
+    position: relative;
+    left: 4%; 
+}
+
+
+.box-logo__image{
+    width: 100%;
+}
+
+.nav__list{
+    li{
+        display: inline;
+        list-style-type: none;
+    }
+}
+
+.nav-item{
+    a{
+        color: $white;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 500;
+        padding: .3rem;
+        font-size: 1.125rem;
+        transition: all .5s 0s ease;
+        &:hover,&:focus{
+            color: $tertiary;
+        }
+    }
+}
+
+/* navbar */
+
+/*Background full page*/
+
+.background{
+    background-color: $main-color;
+}
+
+/*Background full page*/
