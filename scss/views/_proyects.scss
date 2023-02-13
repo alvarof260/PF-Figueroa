@@ -3,6 +3,9 @@
 
 #content-proyect{
     height: 100vh;
+    @include mobile{
+        height: 275vh;
+    }
 }
 
 .proyects{
@@ -11,43 +14,52 @@
     flex-flow: row wrap;
     justify-content: center;
     margin: 0 auto;
+    @include mobile{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    &__box{
+        width: 35vw;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 3rem;
+        margin-right: 3.5rem;
+        @include mobile{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+        }
+    }
 }
 
-.proyects__box{
-    width: 35vw;
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 3rem;
-    margin-right: 3.5rem;
-}
 
 .box{
     width: 50rem;
-}
-
-.box__image{
-    width: 100%;
-    border-radius: .5rem;
+    @include mobile{
+        width: 24rem;
+    }
+    &__image{
+        width: 100%;
+        border-radius: .5rem;
+        margin-right: .5rem;
+        @include mobile{
+            margin-right: 0 !important;
+        }
+    }   
 }
 
 .box-text--proyect{
     text-align: left;
     margin-left: .8rem;
-}
-
-.box-btn__btn--small{
-    width: 5rem;
-    height: 2rem;
-    margin-right: .5rem;
-}
-
-#content-proyect .box-text__btn{
-    .box-text__btn{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
+    @include mobile{
+        text-align: center;
     }
-    
 }
+
+
 
 /** proyect * content **/

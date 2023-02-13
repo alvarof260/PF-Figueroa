@@ -1,0 +1,53 @@
+.button{
+    width: 7.5rem;
+    height: 3.125rem;
+    color: $white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    background-color: $tertiary;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.box-btn__btn{
+    @extend .button;
+    transition: all .5s 0s ease;
+    &:hover, &:focus{
+        transform: scale(1.1,1.1);
+        color: $tertiary;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+}
+
+.box-btn__btn--big{
+    @extend .button;
+    width: 10.5rem;
+    transition: all .5s 0s ease;
+    &:hover, &:focus{
+        transform: scale(1.1,1.1);
+        color: $tertiary;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+}
+
+.box-btn__btn--small{
+    @extend .button;
+    width: 5rem;
+    height: 2rem;
+    margin-right: .5rem;
+}
+
+#submit{
+    @extend .button;
+    grid-area: send;
+    transition: all .5s 0s ease;
+    &:focus,&:hover{
+        color: $white;
+        background-color: $green;
+        transform: scale(1.1,1.1);
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+}

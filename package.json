@@ -1,7 +1,7 @@
 {
   "name": "estanislao",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio website - Developer Full-Stack / Web Designer - Alvaro Estanislao Figueroa",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
