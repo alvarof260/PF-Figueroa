@@ -4,16 +4,37 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    @include mobile{
+    @include sm-mobile{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    @include md-mobile{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    @include tablet{
         display: flex;
         flex-flow: column nowrap;
     }
 }
 
 .box-image{
+    margin-right: 2.5rem;
     width: 25vw;
-    @include mobile{
+    @include sm-mobile{
+        margin-right: 0rem;
+        margin-bottom: 2.5rem;
         width: 80vw;
+    }
+    @include md-mobile{
+        margin-right: 0rem;
+        margin-bottom: 2.5rem;
+        width: 80vw;
+    }
+    @include tablet{
+        margin-right: 0rem;
+        margin-bottom: 2.5rem;
+        width: 50vw;
     }
     &__image{
         width: 100%;
@@ -24,18 +45,39 @@
 .box-text{
     width: 25vw;
     text-align: right;
-    @include mobile{
-        width: 70vw;
+    @include sm-mobile{
+        width: 80vw;
         text-align: center;
+        margin: 0 auto;
+    }
+    @include md-mobile{
+        width: 80vw;
+        text-align: center;
+        margin: 0 auto;
+    }
+    @include tablet{
+        width: 50vw;
+        text-align: center;
+        margin: 0rem 0rem !important;
     }
     &__title--BigTitle{
         font-size: 4.5rem;
         font-weight: bold;
         line-height: 1;
         color: $blue;
-        @include mobile{
+        @include sm-mobile{
             font-size: 4rem;
             font-weight: bold;
+        }
+        @include md-mobile{
+            font-size: 4rem;
+            font-weight: bold; 
+            text-align: center;
+        }
+        @include tablet{
+            font-size: 4rem;
+            font-weight: bold; 
+            text-align: center;
         }
     }
     
@@ -43,6 +85,12 @@
         font-size: 1.5;
         font-weight: 400;
         margin-top: 0.938rem;
-        color: $blue-light;
+        color: $gray;
+        @include md-mobile{
+            text-align: center;
+        }
+        @include tablet{
+            text-align: center;
+        }
     }
 }

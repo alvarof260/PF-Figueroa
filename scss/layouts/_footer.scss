@@ -6,7 +6,11 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 2.813rem 0;
-    @include mobile{
+    @include sm-mobile{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    @include md-mobile{
         display: flex;
         flex-flow: column nowrap;
     }
@@ -30,7 +34,13 @@
 
 
 .container__social-icons{
-    @include mobile{
+    @include sm-mobile{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: .75rem;
+    }
+    @include md-mobile{
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -43,7 +53,10 @@
         cursor: pointer;
         text-decoration: none;
         transition: all .5s 0s ease;
-        @include mobile{
+        @include sm-mobile{
+            margin:0 .5rem;
+        }
+        @include md-mobile{
             margin:0 .5rem;
         }
         &:hover,&:focus{

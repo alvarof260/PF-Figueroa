@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import 'utilities/variables';
-@import 'components/buttons';
 @import 'utilities/mixings';
+@import 'components/buttons';
 @import 'components/cards';
+@import 'components/inputs';
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'views/home';
 @import 'views/about';
 @import 'views/services';
-@import 'views/proyects';
+@import 'views/work';
 @import 'views/contact';
 
 /*General Config*/

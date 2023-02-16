@@ -14,17 +14,23 @@
 .card{
     @extend .cardNormal;
     @include card(10.625rem,12.5rem);
-    @include mobile{
-        width:6.5rem;
-        height: 7.5rem;
+    @include sm-mobile{
+        @include card(6.6rem,8.5rem);
+    }
+    @include md-mobile{
+        @include card(7.5rem,8.5rem);
     }
     .fa-brands{
         color: $blue;
         font-size: 4.5rem;
         margin: 3.125rem 0;
-        @include mobile{
+        @include sm-mobile{
             font-size: 3rem;
-            margin: 1.125rem 0;
+            margin: 2rem 0;
+        }
+        @include md-mobile{
+            font-size: 3rem;
+            margin: 2rem 0;
         }
     } 
     

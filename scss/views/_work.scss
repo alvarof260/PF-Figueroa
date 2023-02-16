@@ -1,0 +1,128 @@
+/** proyect * content **/
+
+
+#content-proyect{
+    height: 100vh;
+    @include sm-mobile{
+        height: auto;
+    }
+    @include md-mobile{
+        height: auto;
+    }
+    @include tablet{
+        height: auto;
+    }
+}
+
+.proyects{
+    width: 80vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    @include sm-mobile{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    @include md-mobile{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    @include tablet{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    @include desktop{
+        width: 90vw;
+    }
+    &__box{
+        width: 35vw;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 3rem;
+        margin-right: 3.5rem;
+        @include sm-mobile{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+        }
+        @include md-mobile{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+        }
+        @include tablet{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            width: 50vw;
+            margin: 3rem auto;
+        }
+        @include desktop{
+            width: 40vw;
+        }
+    }
+}
+
+
+.box{
+    width: 50rem;
+    @include sm-mobile{
+        width: 18rem;
+    }
+    @include md-mobile{
+        width: 21.5rem;
+    }
+    @include tablet{
+        width: 35rem;
+    }
+    @include desktop{
+        width: 50rem;
+    }
+    &__image{
+        width: 100%;
+        border-radius: .5rem;
+        margin-right: .5rem;
+        @include sm-mobile{
+            margin-right: 0 !important;
+        }
+        @include md-mobile{
+            margin-right: 0;
+        }
+        @include tablet{
+            margin-right: 0;
+        }
+    }   
+}
+
+.box-text--proyect{
+    text-align: left;
+    margin-left: .8rem;
+    @include sm-mobile{
+        text-align: center;
+    }
+    @include md-mobile{
+        text-align: center;
+    }
+    @include tablet{
+        text-align: center;
+    }
+    @include desktop{
+        width: 40vw;
+    }
+}
+
+
+
+/** proyect * content **/

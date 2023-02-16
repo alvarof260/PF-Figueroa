@@ -1,0 +1,49 @@
+.input{
+    background-color: $blue-light;
+    border: none;
+    border-radius: .3rem;
+    padding-left: 1rem;
+    color: $gray;
+    outline: none;
+}
+
+.input-placeholder{
+    color: #0554F2;
+}
+
+
+
+#nom{
+    grid-area: name;
+    @extend .input;
+    &::placeholder{
+        @extend .input-placeholder;
+    }
+}
+
+
+#ema{
+    grid-area: email;
+    @extend .input;
+    &::placeholder{
+        @extend .input-placeholder;
+    }
+}
+
+#pro{
+    grid-area: proyect;
+    @extend .input;
+    &::placeholder{
+        @extend .input-placeholder;
+    }
+}
+
+
+#msj{
+    grid-area: message;
+    @extend .input;
+    padding-top: 1rem;
+    &::placeholder{
+        @extend .input-placeholder
+    }
+}

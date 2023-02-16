@@ -19,67 +19,21 @@
     grid-template-rows: 3rem 3rem auto;
     grid-column-gap: .5rem;
     grid-row-gap: 1rem;
-    @include mobile{
+    @include sm-mobile{
         grid-column-gap: .25rem;
         grid-row-gap: .5rem;
-        grid-template-columns: repeat(2,12rem);
+        grid-template-columns: repeat(2,9rem);
+    }
+    @include md-mobile{
+        grid-column-gap: .25rem;
+        grid-row-gap: .5rem;
+        grid-template-columns: repeat(2,10.5rem);
+    }
+    @include tablet{
+        grid-template-columns: repeat(2,15rem);
     }
 }
 
-#nom{
-    grid-area: name;
-    background-color: $blue-light;
-    border: none;
-    border-radius: .3rem;
-    padding-left: 1rem;
-    color: $gray;
-    outline: none;
-}
-
-#nom::placeholder{
-    color: #0554F2;
-}
-
-#ema{
-    grid-area: email;
-    background-color: $blue-light;
-    border: none;
-    border-radius: .3rem;
-    padding-left: 1rem;
-    color: $gray;
-    outline: none;
-}
-
-#ema::placeholder{
-    color: $blue;
-}
-
-#pro{
-    grid-area: proyect;
-    background-color: $blue-light;
-    border: none;
-    border-radius: .3rem;
-    padding-left: 1rem;
-    color: $gray;
-    outline: none;
-}
-
-#pro::placeholder{
-    color: $blue;
-}
-
-#msj{
-    grid-area: message;
-    background-color: $blue-light;
-    border: none;
-    border-radius: .3rem;
-    padding: 1rem;
-    color: $gray;
-    outline: none;
-    &::placeholder{
-        color: $blue;
-    }
-}
 
 
 #submit{

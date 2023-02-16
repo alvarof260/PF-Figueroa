@@ -2,8 +2,11 @@
 
 #content-services{
     height: 100vh;
-    @include mobile{
-        height: 165vh;
+    @include sm-mobile{
+        height: auto;
+    }
+    @include md-mobile{
+        height: auto;
     }
 }
 
@@ -22,7 +25,13 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    @include mobile{
+    @include sm-mobile{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    @include md-mobile{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
